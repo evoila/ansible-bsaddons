@@ -1,0 +1,64 @@
+---
+# vars file for addons
+default_path: "/usr/local/bin"
+
+### non packed files 
+cf_version: "7.2.0"
+spruce_version: "1.27.0"
+kubectl_version: "1.21.0"
+yq_version: "4.9.3"
+ytt_version: "0.33.0"
+kapp_version: "0.36.0"
+uaa_cli_version: "0.10.0"
+bosh_cli_version: "6.4.3"
+
+### packed 
+k9s_version: "0.24.10"
+credhub_version: "2.9.0"
+om_version: "7.2.0"
+jq_version: "1.6"
+
+### 
+mc:
+  URL: "https://dl.min.io/client/mc/release/linux-amd64/mc"
+  dest: "{{ default_path }}/mcli" 
+spruce:
+  URL : "https://github.com/geofffranks/spruce/releases/download/v{{ spruce_version }}/spruce-linux-amd64"
+  dest: "{{ default_path}}/spruce"
+kubectl:
+  URL: "https://dl.k8s.io/release/v{{ kubectl_version }}/bin/linux/amd64/kubectl"
+  dest: "{{ default_path }}/kubectl"
+yq: 
+  URL: "https://github.com/mikefarah/yq/releases/download/v{{ yq_version }}/yq_linux_amd64"
+  dest: "{{ default_path}}/yq"
+bosh_cli:
+  URL: "https://github.com/cloudfoundry/bosh-cli/releases/download/v{{ bosh_cli_version }}/bosh-cli-{{ bosh_cli_version }}-linux-amd64"
+  dest: "{{ default_path }}/bosh"
+ytt:
+  URL: "https://github.com/vmware-tanzu/carvel-ytt/releases/download/v{{ ytt_version }}/ytt-linux-amd64"
+  dest: "{{ default_path }}/ytt"
+kapp:
+  URL: "https://github.com/vmware-tanzu/carvel-kapp/releases/download/v{{ kapp_version }}/kapp-linux-amd64"
+  dest: "{{ default_path }}/kapp"
+uaa_cli:
+  URL: "https://github.com/cloudfoundry-incubator/uaa-cli/releases/download/{{ uaa_cli_version }}/uaa-linux-amd64-{{ uaa_cli_version }}"
+  dest: "{{ default_path }}/uaa-cli"
+jq:
+  URL: "https://github.com/stedolan/jq/releases/download/jq-{{ jq_version }}/jq-linux64"
+  dest: "{{ default_path }}/jq" 
+#### packed software 
+cf: 
+  URL:  "https://packages.cloudfoundry.org/stable?release=linux64-binary&version={{ cf_version }}&source=github-rel"
+  # URL: https://packages.cloudfoundry.org/stable?release=linux64-binary&version=7.2.0&source=github-rel
+k9s:
+  URL : "https://github.com/derailed/k9s/releases/download/v{{ k9s_version }}/k9s_v{{ k9s_version }}_Linux_x86_64.tar.gz"
+credhub:
+  URL : "https://github.com/cloudfoundry-incubator/credhub-cli/releases/download/{{ credhub_version }}/credhub-linux-{{ credhub_version }}.tgz"
+om:
+  # URL: https://github.com/pivotal-cf/om/releases/download/7.2.0/om-linux-7.2.0
+  URL: "https://github.com/pivotal-cf/om/releases/download/{{ om_version }}/om-linux-{{ om_version }}.tar.gz"
+
+###### 
+# curl -fsSL https://apt.releases.hashicorp.com/gpg | sudo apt-key add -
+# sudo apt-add-repository "deb [arch=amd64] https://apt.releases.hashicorp.com $(lsb_release -cs) main"
+# sudo apt-get update && sudo apt-get install vault
