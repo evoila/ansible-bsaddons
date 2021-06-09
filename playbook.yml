@@ -1,6 +1,4 @@
 ---
-- hosts: bootstrap
-  gather_facts: false
-  user: ubuntu
+- hosts: All 
   roles:
     - addons 
