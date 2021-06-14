@@ -27,4 +27,5 @@
     - "{{ k9s }}"
     - "{{ credhub }}"
     - "{{ om }}"
+    - "{{ govc }}"
   become: true  
