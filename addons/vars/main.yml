@@ -18,8 +18,11 @@ credhub_version: "2.9.0"
 om_version: "7.2.0"
 jq_version: "1.6"
 govc_vesion: "0.26.0"
+fly_version: "7.3.2"
 
-### 
+
+# URLs 
+
 mc:
   URL: "https://dl.min.io/client/mc/release/linux-amd64/mc"
   dest: "{{ default_path }}/mcli" 
@@ -60,7 +63,8 @@ om:
   URL: "https://github.com/pivotal-cf/om/releases/download/{{ om_version }}/om-linux-{{ om_version }}.tar.gz"
 govc:
   URL: "https://github.com/vmware/govmomi/releases/download/{{govc_version}}/govc_Linux_x86_64.tar.gz"
-
+fly:
+  URL: "https://github.com/concourse/concourse/releases/download/v{{ fly_version }}/fly-{{ fly_version }}-linux-amd64.tgz"
 
 ###### 
 # curl -fsSL https://apt.releases.hashicorp.com/gpg | sudo apt-key add -
