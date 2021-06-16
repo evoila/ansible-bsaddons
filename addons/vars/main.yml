@@ -17,7 +17,7 @@ k9s_version: "0.24.10"
 credhub_version: "2.9.0"
 om_version: "7.2.0"
 jq_version: "1.6"
-govc_vesion: "0.26.0"
+govc_version: "0.26.0"
 fly_version: "7.3.2"
 
 
