@@ -28,4 +28,5 @@
     - "{{ credhub }}"
     - "{{ om }}"
     - "{{ govc }}"
+    - "{{ fly }}"
   become: true  
