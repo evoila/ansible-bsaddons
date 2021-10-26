@@ -1,0 +1,32 @@
+---
+- name: install addons
+  get_url:
+    url: "{{ item.URL }}"
+    dest: "{{ item.dest }}"
+    mode: '0775'
+  loop: 
+    - "{{ mc }}"
+    - "{{ spruce }}"
+    - "{{ kubectl }}"
+    - "{{ yq }}"
+    - "{{ bosh_cli }}"
+    - "{{ ytt }}"
+    - "{{ kapp }}"
+    - "{{ uaa_cli }}"
+    - "{{ jq }}"
+  become: true
+
+- name: install packed software
+  unarchive:
+    src: "{{ item.URL }}"
+    dest: "{{ default_path }}"
+    mode: '0775'
+    remote_src: yes 
+  loop:
+    - "{{ cf }}"
+    - "{{ k9s }}"
+    - "{{ credhub }}"
+    - "{{ om }}"
+    - "{{ govc }}"
+    - "{{ fly }}"
+  become: true  

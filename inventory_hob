@@ -1,0 +1,2 @@
+[bootstrap]
+bshob 	ansible_host=10.4.1.241	ansible_user=ubuntu
