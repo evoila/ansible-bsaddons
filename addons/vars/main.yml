@@ -10,7 +10,7 @@ yq_version: "4.13.5"
 ytt_version: "0.37.0"
 kapp_version: "0.40.0"
 uaa_cli_version: "0.10.0"
-bosh_cli_version: "6.4.7"
+bosh_cli_version: "6.4.11"
 
 ### packed 
 k9s_version: "0.24.15"
@@ -18,7 +18,7 @@ credhub_version: "2.9.0"
 om_version: "7.2.0"
 jq_version: "1.6"
 govc_version: "0.26.0"
-fly_version: "7.5.0"
+fly_version: "7.6.0"
 
 
 # URLs 
